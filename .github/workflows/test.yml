@@ -35,9 +35,6 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Run lint
-        run: npm run lint
-
       - name: Run tests
         run: npm run mocha
         if: "!(startsWith(matrix.os, 'ubuntu') && matrix.node == env.NODE_COV)"
